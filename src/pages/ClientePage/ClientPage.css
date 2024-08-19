@@ -1,0 +1,61 @@
+.client-page {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Asegura que la página ocupe toda la altura */
+}
+
+.client-nav {
+  display: flex;
+  background-color: #f5f5f5;
+  padding: 10px 20px; /* Añade relleno para mayor espacio */
+  border-bottom: 1px solid #ddd; /* Añade una línea inferior para separación */
+}
+
+.client-nav button {
+  border: none;
+  background: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+
+.client-nav button.active {
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+  color: #000;
+}
+
+.client-content {
+  flex: 1; /* Permite que el contenido ocupe el espacio restante */
+  padding: 20px;
+  background-color: #fff;
+  overflow-y: auto; /* Permite el desplazamiento si el contenido es demasiado largo */
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+  .client-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .client-nav button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* Estilos para pantallas medianas (tabletas) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .client-nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .client-nav button {
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,82 @@
+/* Estilo general del contenedor */
+.contact-container {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  text-align: center;
+  padding:20px; 
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del formulario */
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+  padding: 30px;
+  border: 2px solid rgb(143, 139, 139);
+  border-radius: 15px;
+  background-color: #f6f4f2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de los campos del formulario */
+.reservation-form input,
+.reservation-form select,
+.reservation-form textarea {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 2px solid rgb(143, 139, 139);
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+/* Efecto de enfoque en los campos del formulario */
+.reservation-form input:focus,
+.reservation-form select:focus,
+.reservation-form textarea:focus {
+  border-color: #ff5722;
+  outline: none;
+}
+
+/* Estilo del botón de envío */
+.reservation-form button {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: tomato;
+  color: rgb(11, 11, 11);
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Efecto hover en el botón de envío */
+.reservation-form button:hover {
+  background-color: #efac97;
+}
+
+/* Estilo del mensaje flotante */
+.floating-message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.floating-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: opacity 0.5s ease-in-out;
+}

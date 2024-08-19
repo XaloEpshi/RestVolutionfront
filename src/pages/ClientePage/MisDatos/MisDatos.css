@@ -1,0 +1,17 @@
+#mis-datos-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  #datos-title {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  #datos-description {
+    font-size: 16px;
+    color: #666;
+  }
+  

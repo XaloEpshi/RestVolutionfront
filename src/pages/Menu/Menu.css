@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+.menu {
+  margin-top: 80px;
+  text-align: center;
+  color: tomato;
+  
+}
+
+.menu h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 6em;
+  margin-bottom: 30px;
+  
+}
+
+.categorias-menu-container {
+  overflow: auto; /* Permite el desplazamiento */
+  -ms-overflow-style: none;  /* IE y Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.categorias-menu-container::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari y Opera */
+}
+
+
+.categorias-menu {
+  display: inline-flex;
+  justify-content: center;
+  padding: 20px 0;
+  
+}
+
+.categorias-menu button {
+  min-width: 100px;
+  height: 100px;
+  border: none;
+  background-color: #f54e48;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.2em;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  white-space: normal;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.categorias-menu button:hover {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.categorias-menu button.active {
+  background-color: tomato;
+  color: white;
+}
+
+.categorias-menu button:hover {
+  background-color: tomato;
+  color: white;
+}
+
+.platos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.plato-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px; /* Ajusta el ancho máximo de las tarjetas */
+  transition: transform 0.3s;
+}
+
+.plato-card:hover {
+  transform: scale(1.05);
+}
+
+.plato-image {
+  width: 100%;
+  height: auto;
+  max-height: 300px; /* Ajusta la altura máxima de las imágenes */
+  object-fit: cover;
+}
+
+.plato-info {
+  padding: 20px;
+  text-align: left;
+}
+
+.plato-info h3 {
+  margin: 0 0 10px;
+}
+
+.plato-info p {
+  margin: 5px 0;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .platos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plato-card {
+    width: 90%;
+  }
+}
+
+.buy-button {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+  background-color: #e5533d;
+}
+
+/* Contenedor del mensaje */
+.mensaje {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 237, 71);
+  color: rgb(10, 10, 10);
+  padding: 15px 25px;
+  border-radius: 5px;
+  z-index: 1000; /* Asegura que el mensaje esté encima de otros elementos */
+  font-size: 16px;
+}

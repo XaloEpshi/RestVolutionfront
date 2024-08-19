@@ -1,0 +1,218 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  
+}
+
+header {
+  background-color: #f7f4f4;
+  color: tomato;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 3em;
+  margin: 0;
+}
+
+header h3 {
+  font-size: 1.5em;
+  margin: 10px 0 0;
+}
+
+.about-section, .menu-section, .testimonials-section {
+  background-color: white;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+}
+
+.about-section h2, .menu-section h2, .testimonials-section h2 {
+  font-family: 'Lobster', cursive;
+  color: #eb3514;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.about-section p, .menu-section p, .testimonials-section p {
+  line-height: 1.6;
+}
+
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.menu-item {
+  background-color: #ffe4e1;
+  border: 1px solid #e63718;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 20px;
+  width: 45%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item h3 {
+  font-family: 'Lobster', cursive;
+  margin-top: 0;
+}
+
+.menu-item p {
+  margin: 10px 0 0;
+  font-size: 20px;
+}
+
+.testimonials-section p {
+  font-style: italic;
+  margin: 20px 0;
+}
+
+.testimonials-section p::before {
+  content: "“";
+}
+
+.testimonials-section p::after {
+  content: "”";
+}
+
+
+@media (max-width: 768px) {
+  .menu-item {
+    flex: 1 1 100%;
+  }
+}
+
+.menu-section {
+  text-align: center;
+  background-color: #f8f8f8;
+  padding: 20px;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.menu-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 300px;
+  text-align: left;
+}
+
+.menu-item img {
+  width: 100%;
+  height: 300px; /* Ajusta la altura según tus necesidades */
+  object-fit: cover; /* Esto asegura que la imagen se recorte para llenar el contenedor */
+  border-radius: 10px;
+}
+
+.menu-item h3 {
+  color: #333;
+}
+
+.menu-item p {
+  color: tomato;
+}
+
+.about-section {
+  background-color: #f0f0f0;
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-section h2 {
+  color: tomato;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  color: tomato;
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-section p br {
+  display: none; /* Oculta los saltos de línea para un texto más fluido */
+}
+
+.about-section p::after {
+  content: " ";
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #e74c3c; /* Color rojo para resaltar el mensaje final */
+}
+
+/* Estilos para el contenedor principal del Home */
+.home-container {
+  position: relative;
+  z-index: 1; /* Asegura que el contenedor del carrusel tenga un menor z-index */
+}
+
+/* Estilos para la sección hero */
+.hero-section {
+  position: relative;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 600px; /* Ajusta la altura según tus necesidades */
+  object-fit: cover; /* Esto asegura que la imagen se ajuste al contenedor sin distorsionarse */
+}
+
+
+h1, h3 {
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+}
+
+
