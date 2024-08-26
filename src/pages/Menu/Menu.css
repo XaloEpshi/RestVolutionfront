@@ -4,14 +4,12 @@
   margin-top: 80px;
   text-align: center;
   color: tomato;
-  
 }
 
 .menu h1 {
   font-family: 'Dancing Script', cursive;
-  font-size: 6em;
+  font-size: 4em; /* Ajusta para pantallas grandes */
   margin-bottom: 30px;
-  
 }
 
 .categorias-menu-container {
@@ -24,22 +22,21 @@
   display: none;  /* Chrome, Safari y Opera */
 }
 
-
 .categorias-menu {
-  display: inline-flex;
+  display: flex; /* Cambiado a flex para mejor manejo en pantallas pequeñas */
+  flex-wrap: wrap; /* Permite que los botones se ajusten */
   justify-content: center;
   padding: 20px 0;
-  
 }
 
 .categorias-menu button {
-  min-width: 100px;
-  height: 100px;
+  min-width: 80px; /* Reducido para pantallas más pequeñas */
+  height: 80px; /* Reducido para pantallas más pequeñas */
   border: none;
   background-color: #f54e48;
   cursor: pointer;
   border-radius: 50%;
-  font-size: 1.2em;
+  font-size: 1em; /* Ajustado para pantallas más pequeñas */
   transition: background-color 0.3s, color 0.3s;
   display: flex;
   justify-content: center;
@@ -51,16 +48,11 @@
 }
 
 .categorias-menu button:hover {
-  background-color: #e0e0e0;
-  color: #333;
-}
-
-.categorias-menu button.active {
   background-color: tomato;
   color: white;
 }
 
-.categorias-menu button:hover {
+.categorias-menu button.active {
   background-color: tomato;
   color: white;
 }
@@ -90,7 +82,7 @@
 .plato-image {
   width: 100%;
   height: auto;
-  max-height: 300px; /* Ajusta la altura máxima de las imágenes */
+  max-height: 250px; /* Ajusta la altura máxima de las imágenes */
   object-fit: cover;
 }
 
@@ -105,18 +97,6 @@
 
 .plato-info p {
   margin: 5px 0;
-}
-
-/* Media queries para pantallas pequeñas */
-@media (max-width: 768px) {
-  .platos-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .plato-card {
-    width: 90%;
-  }
 }
 
 .buy-button {
@@ -145,4 +125,45 @@
   border-radius: 5px;
   z-index: 1000; /* Asegura que el mensaje esté encima de otros elementos */
   font-size: 16px;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .menu h1 {
+    font-size: 3em; /* Ajusta el tamaño del texto en pantallas pequeñas */
+  }
+
+  .categorias-menu button {
+    min-width: 70px; /* Ajusta el tamaño de los botones */
+    height: 70px;
+    font-size: 0.9em;
+  }
+
+  .plato-card {
+    width: 90%;
+  }
+
+  .plato-image {
+    max-height: 200px; /* Ajusta la altura máxima de las imágenes */
+  }
+}
+
+@media (max-width: 480px) {
+  .menu h1 {
+    font-size: 2.5em; /* Ajusta aún más el tamaño del texto */
+  }
+
+  .categorias-menu button {
+    min-width: 60px; /* Ajusta el tamaño de los botones */
+    height: 60px;
+    font-size: 0.8em;
+  }
+
+  .plato-card {
+    width: 100%;
+  }
+
+  .plato-image {
+    max-height: 180px; /* Ajusta la altura máxima de las imágenes */
+  }
 }
