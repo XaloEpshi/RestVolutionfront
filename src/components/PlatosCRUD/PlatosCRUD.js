@@ -149,7 +149,7 @@ const PlatosCRUD = () => {
     "Entradas",
     "Platos Principales",
     "Sopas y Ensaladas",
-    "Especialidades de la Casa",
+    "Especialidad de la Casa",
     "Desayunos",
     "Menú Infantil",
     "Postres",

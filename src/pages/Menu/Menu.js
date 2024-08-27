@@ -9,7 +9,7 @@ const Menu = ({ onAddToCart, category, setCategory, isAuthenticated }) => {
   useEffect(() => {
     const fetchPlatos = async () => {
       try {
-        const response = await axios.get("https://rest-volution-all.vercel.app/api/allPlatos");
+        const response = await axios.get("http://localhost:3001/api/allPlatos");
         setPlatos(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -35,7 +35,7 @@ const Menu = ({ onAddToCart, category, setCategory, isAuthenticated }) => {
     "Entradas",
     "Platos Principales",
     "Sopas y Ensaladas",
-    "Especialidades de la Casa",
+    "Especialidad de la Casa",
     "Desayunos",
     "Menú Infantil",
     "Postres",
@@ -78,7 +78,7 @@ const Menu = ({ onAddToCart, category, setCategory, isAuthenticated }) => {
         {platosFiltrados.map((plato) => (
           <div key={plato.idPlato} className="plato-card">
             <img
-              src={`https://rest-volution-all.vercel.app/upload/${plato.imagen}`}
+              src={`http://localhost:3001/upload/${plato.imagen}`}
               alt={plato.nombre}
               className="plato-image"
             />
