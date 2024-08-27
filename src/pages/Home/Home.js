@@ -10,9 +10,7 @@ const Home = () => {
   useEffect(() => {
     const fetchDestacados = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:3001/api/destacados-activos"
-        );
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/destacados-activos`);
         setDestacados(response.data);
       } catch (error) {
         console.error("Error fetching destacados:", error);
@@ -95,7 +93,7 @@ const Home = () => {
               <div key={plato.idPlato} className="menu-item">
                 <h3>{plato.nombre}</h3>
                 <img
-                  src={`http://localhost:3001/upload/${plato.imagen}`}
+                  src={`${process.env.REACT_APP_API_URL}/upload/${plato.imagen}`}
                   alt={plato.nombre}
                 />
                 <p>{plato.descripcion}</p>

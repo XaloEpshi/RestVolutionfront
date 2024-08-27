@@ -56,7 +56,7 @@ const LoginPopup = ({ setShowLogin, setIsAuthenticated, setIsAdmin }) => {
             showMessage('Todos los campos son requeridos');
             return;
         }
-        handleAuth('http://localhost:3001/api/auth/registerCliente', { nombre, correo, contraseña });
+        handleAuth('https://rest-volution-all.vercel.app/api/auth/registerCliente', { nombre, correo, contraseña });
     };
 
     const handleLogin = () => {
@@ -66,7 +66,9 @@ const LoginPopup = ({ setShowLogin, setIsAuthenticated, setIsAdmin }) => {
             showMessage('Correo y contraseña son requeridos');
             return;
         }
-        const url = userType === "Cliente" ? 'http://localhost:3001/api/auth/loginCliente' : 'http://localhost:3001/api/admin/login';
+        const url = userType === "Cliente" 
+            ? 'https://rest-volution-all.vercel.app/api/auth/loginCliente' 
+            : 'https://rest-volution-all.vercel.app/api/admin/login';
         handleAuth(url, { correo, contraseña });
     };
 
